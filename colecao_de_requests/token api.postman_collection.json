@@ -169,6 +169,37 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "obter informacoes de um cep",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cep\":\"28390000\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/cep",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"cep"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
