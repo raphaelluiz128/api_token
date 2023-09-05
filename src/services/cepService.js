@@ -1,19 +1,13 @@
-import apiViaCep from "../configs/configs.js";
+import viaCep from "../configs/configs.js";
 const buscarCep = async (req, cep) => {
     try {
-    await apiViaCep.get("/"+cep+"/json")
-      .then((response) => { return response.data})
-      .catch((err) => {
-        console.error("ops! ocorreu um erro" + err);
-        return err;
-     });
-
+    const response = await viaCep.apiViaCep.get("/"+cep+"/json");
+    return response.data;
     } catch (error) {
         console.error(error);
         return error;
     }
 }
-
 
 export default {
     buscarCep

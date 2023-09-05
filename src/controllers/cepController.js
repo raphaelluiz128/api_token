@@ -2,7 +2,7 @@ import cepService from "../services/cepService.js";
 
 const buscarCep = async (req, res) => {
     try {
-        
+       const cep = req.body.cep; 
        const response = await cepService.buscarCep(req, cep);
        res.status(200).json(response);
 
