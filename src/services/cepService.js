@@ -1,4 +1,4 @@
-import apiViaCep from "../configs/configs";
+import apiViaCep from "../configs/configs.js";
 const buscarCep = async (req, cep) => {
     try {
     await apiViaCep.get("/"+cep+"/json")

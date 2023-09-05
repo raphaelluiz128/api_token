@@ -1,4 +1,4 @@
-import cepService from "../services/cepService";
+import cepService from "../services/cepService.js";
 
 const buscarCep = async (req, res) => {
     try {
